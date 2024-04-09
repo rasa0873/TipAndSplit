@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="total_label">TOTAL</string>
+    <string name="cal_activity_label">Calculadora</string>
+    <string name="calculator">Calculadora</string>
+    <string name="delete">Deletar</string>
+    <string name="currencies">Taxas de câmbio</string>
+    <string name="per_person_label">POR PERSSOA</string>
+    <string name="about_drawer">Sobre</string>
+    <string name="help">Versão</string>
+    <string name="help_xlarge">VERSÃO</string>
+    <string name="selected_currency">Moeda Selecionada:</string>
+    <string name="currencies_xlarge">Taxas de câmbio</string>
+    <string name="calculator_xlarge">CALCULADORA</string>
+    <string name="list_name">Selecione a Moeda</string>
+    <string name="about">Versão</string>
+    <string name="bill">CONTA</string>
+    <string name="tip">PONTA</string>
+    <string name="calculator_subtitle">CALCULADORA</string>
+    <string name="pos_answer">Sim</string>
+    <string name="neg_answer">Não</string>
+    <string name="action_settings">Configurações</string>
+    <string name="tip_amount_label">VALOR DA GORJETA</string>
+    <string name="split">DIVIDIDO</string>
+    <string name="progress_dialog_loading">Taxas de câmbio...</string>
+    <string name="listview_rate_tag">Taxa de câmbio: %1$s</string>
+    <string name="rate_not_available">Taxa de câmbio não disponível</string>
+    <string name="max_length_reached_input">Comprimento máximo do número alcançado</string>
+    <string name="result_exceeds_max_13">O resultado excede o limite de 13 dígitos</string>
+    <string name="service_starting">Início do serviço</string>
+</resources>

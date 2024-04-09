@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="total_label">TOTALE</string>
+    <string name="cal_activity_label">Calculatore</string>
+    <string name="calculator">Calculatore</string>
+    <string name="delete">Cancella</string>
+    <string name="currencies">Tassi di cambio</string>
+    <string name="about_drawer">Riguardo a</string>
+    <string name="help">Versione</string>
+    <string name="help_xlarge">VERSIONE</string>
+    <string name="selected_currency">Moneta Selezionata:</string>
+    <string name="currencies_xlarge">Tassi di cambio</string>
+    <string name="calculator_xlarge">CALCOLATRICE</string>
+    <string name="list_name">Seleziona la Valuta</string>
+    <string name="about">Versione</string>
+    <string name="bill">IL CONTO</string>
+    <string name="tip">PUNTA</string>
+    <string name="calculator_subtitle">CALCOLATRICE</string>
+    <string name="pos_answer">Sì</string>
+    <string name="neg_answer">No</string>
+    <string name="action_settings">Settings</string>
+    <string name="tip_amount_label">IMPORTO DELLA MANCIA</string>
+    <string name="per_person_label">A TESTA</string>
+    <string name="split">DIVISO</string>
+    <string name="progress_dialog_loading">Tassi di cambio...</string>
+    <string name="listview_rate_tag">Tasso di cambio: %1$s</string>
+    <string name="rate_not_available">Tasso di cambio non disponibile</string>
+    <string name="max_length_reached_input">Numero massimo di lunghezza raggiunto</string>
+    <string name="result_exceeds_max_13">Il risultato supera il limite di 13 cifre</string>
+    <string name="service_starting">Inizio servizio</string>
+</resources>

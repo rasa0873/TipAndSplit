@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:initialKeyguardLayout="@layout/my_app_widget"
+    android:initialLayout="@layout/my_app_widget"
+    android:minWidth="200dp"
+    android:minHeight="40dp"
+    android:previewImage="@drawable/tip_logo_exchange"
+    android:updatePeriodMillis="3900000"
+    android:widgetCategory="home_screen"/>

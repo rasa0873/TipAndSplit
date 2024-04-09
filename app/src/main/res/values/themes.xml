@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="ThemeOverlay.TipAndSplitRevA.AppWidgetContainer" parent="">
+        <item name="appWidgetBackgroundColor">@color/blanco</item>
+        <item name="appWidgetTextColor">@color/colorTextoBlack</item>
+    </style>
+</resources>

@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name" translatable="false">Tip and Split Traveler</string>
+
+    <string name="list_name">Select the Currency</string>
+
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="per_person_label">PER PERSON</string>
+    <string name="total_label">TOTAL</string>
+    <string name="split">SPLIT</string>
+    <string name="tip_amount_label">TIP AMOUNT</string>
+    <string name="initial_tip" translatable="false">15%</string>
+    <string name="initial_num_of_persons" translatable="false">1</string>
+    <string name="bill">BILL</string>
+    <string name="tip">TIP</string>
+    <string name="help">Version</string>
+    <string name="help_xlarge">VERSION</string>
+    <string name="about">About</string>
+    <string name="delete">Delete</string>
+    <string name="title_activity_list_secundary" translatable="false">list_secundary</string>
+
+    <string name="selected_currency">Selected Currency is:</string>
+    <string name="tip_and_split" translatable="false">Tip and Split Traveler</string>
+    <string name="haru_applications" translatable="false">RASA APPLICATIONS</string>
+    <string name="currencies">Exchange rates</string>
+    <string name="currencies_xlarge">EXCHANGE RATES</string>
+    <string name="calculator">Calculator</string>
+    <string name="calculator_xlarge">CALCULATOR</string>
+    <string name="about_drawer">About</string>
+    <string name="cal_activity_label">Calculator</string>
+    <string name="app_popup" translatable="false">App Version 2.0.1</string>
+    <string name="calculator_subtitle">CALCULATOR</string>
+
+    <string name="pos_answer">Yes</string>
+    <string name="neg_answer">No</string>
+
+    <string name="progress_dialog_loading">Loading Rates…</string>
+    <string name="listview_rate_tag">Rate: %1$s</string>
+    <string name="rate_not_available">Rate: Not Available</string>
+
+    <string name="max_length_reached_input">Max number length reached</string>
+    <string name="result_exceeds_max_13">Result exceeds 13 digit limit</string>
+    <string name="appwidget_rate_value" translatable="false">4.35</string>
+    <string name="add_widget" translatable="false">Add widget</string>
+
+    <string name="service_starting">Service starting</string>
+
+</resources>

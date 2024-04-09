@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/main_layout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#FFFFFF"
+              android:orientation="vertical"
+              android:weightSum="5" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:layout_marginTop="20dp"
+        >
+
+        <EditText
+            android:id="@+id/upperTextView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat"
+            android:textAppearance="?android:attr/textAppearance"
+            android:textColor="@color/greyOne"
+            android:maxLines="1"
+            android:gravity="right|bottom"
+            android:textSize="@dimen/calculator_input_size_small"
+            android:textStyle="normal"
+            android:focusable="false"
+            android:clickable="false"
+            android:keyboardNavigationCluster="false"
+            android:backgroundTint="@color/transparent"
+            />
+
+
+        <EditText
+            android:id="@+id/displayEditText"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat"
+            android:gravity="right|center"
+            android:textColor="@android:color/black"
+            android:maxLines="1"
+            android:backgroundTint="@color/transparent"
+            android:maxLength="13"
+            android:clickable="false"
+            android:focusable="false"
+            android:keyboardNavigationCluster="false"
+
+            android:textSize="@dimen/calculator_input_size_small"
+            android:textStyle="normal"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        >
+
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <!-- Additional row -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                >
+
+
+
+                <ImageButton
+                    android:id="@+id/back"
+
+                    style="@style/calculator_simbol"
+                    android:src="@drawable/ic_backspace_blue_30dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/buttonshape_solid2_grey"
+                    android:shadowColor="#A8A8A8"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="0"
+                    />
+
+                <ImageButton
+                    android:id="@+id/multiply"
+
+                    android:text="x"
+                    android:src="@drawable/ic_clear_blue_30dp"
+                    style="@style/calculator_simbol"
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/buttonshape_solid2_grey"
+                    android:shadowColor="#A8A8A8"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="0"
+                    />
+
+                <ImageButton
+                    android:id="@+id/div"
+
+                    android:text="÷"
+                    android:src="@drawable/ic_devide4_500"
+                    style="@style/calculator_simbol"
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/buttonshape_solid2_grey"
+                    android:shadowColor="#A8A8A8"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="0"
+                    />
+
+            </TableRow>
+
+            <!-- First Row -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                >
+
+                <Button
+                    android:id="@+id/seven"
+
+                    android:text="7"
+                    style="@style/calculator_number"
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/buttonshape_solid_light"
+                    android:shadowColor="#A8A8A8"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="0"
+                    />
+
+                <Button
+                    android:id="@+id/eight"
+
+                    android:text="8"
+                    style="@style/calculator_number"
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/buttonshape_solid_light"
+                    android:shadowColor="#A8A8A8"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="0"
+                    />
+
+                <Button
+                    android:id="@+id/nine"
+
+                    android:text="9"
+                    style="@style/calculator_number"
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/buttonshape_solid_light"
+                    android:shadowColor="#A8A8A8"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="0"
+                    />
+            </TableRow>
+
+            <!-- Second Row -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                >
+
+                <Button
+                    android:id="@+id/four"
+
+                    style="@style/calculator_number"
+                    android:layout_width="0dp"
+
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonshape_solid_light"
+
+                    android:shadowColor="#A8A8A8"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="0"
+
+                    android:text="4"
+                    />
+
+                <Button
+                    android:id="@+id/five"
+
+                    android:text="5"
+                    style="@style/calculator_number"
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/buttonshape_solid_light"
+                    android:shadowColor="#A8A8A8"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="0"
+
+                    />
+
+                <Button
+                    android:id="@+id/six"
+
+                    android:text="6"
+                    style="@style/calculator_number"
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/buttonshape_solid_light"
+                    android:shadowColor="#A8A8A8"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="0"
+
+                    />
+            </TableRow>
+
+            <!-- Third Row -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                >
+
+                <Button
+                    android:id="@+id/one"
+
+                    android:text="1"
+                    style="@style/calculator_number"
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/buttonshape_solid_light"
+                    android:shadowColor="#A8A8A8"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="0"
+
+
+                    />
+
+
+                <Button
+                    android:id="@+id/two"
+
+                    android:text="2"
+                    style="@style/calculator_number"
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/buttonshape_solid_light"
+                    android:shadowColor="#A8A8A8"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="0"
+                    />
+
+                <Button
+                    android:id="@+id/three"
+
+                    android:text="3"
+                    style="@style/calculator_number"
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/buttonshape_solid_light"
+                    android:shadowColor="#A8A8A8"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="0"
+                    />
+
+            </TableRow>
+
+            <!-- Fourth Row -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                >
+
+
+
+                <Button
+                    android:id="@+id/zero"
+
+                    android:text="0"
+                    style="@style/calculator_number"
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+
+                    android:background="@drawable/buttonshape_solid_light"
+                    android:shadowColor="#A8A8A8"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="0"
+
+                    />
+
+                <Button
+                    android:id="@+id/dot"
+
+                    android:text="."
+                    style="@style/calculator_number"
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/buttonshape_solid_light"
+                    android:shadowColor="#A8A8A8"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="0"
+
+                    />
+
+
+                <!-- percentage here -->
+
+
+
+
+            </TableRow>
+
+        </TableLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="5"
+            >
+
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    >
+
+                    <Button
+                        android:id="@+id/percent"
+
+                        android:text="%"
+                        style="@style/calculator_simbol"
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+
+                        android:background="@drawable/buttonshape_solid2_grey"
+                        android:shadowColor="#A8A8A8"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="0"
+                        />
+
+                </TableRow>
+
+                <!-- First Row -->
+
+
+                <!-- Second Row -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    >
+                    <ImageButton
+                        android:id="@+id/minus"
+                        android:src="@drawable/ic_remove_blue_30dp"
+                        android:text="-"
+                        style="@style/calculator_simbol"
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+
+                        android:background="@drawable/buttonshape_solid2_grey"
+                        android:shadowColor="#A8A8A8"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="0"
+                        />
+
+
+                </TableRow>
+
+                <!-- Third Row -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/plus"
+                        android:src="@drawable/ic_add_blue_30dp"
+                        android:text="+"
+                        style="@style/calculator_simbol"
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+
+                        android:background="@drawable/buttonshape_solid2_grey"
+                        android:shadowColor="#A8A8A8"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="0"
+
+                        />
+
+
+                </TableRow>
+
+
+            </TableLayout>
+
+            <Button
+                android:id="@+id/equ"
+
+                android:text="="
+                style="@style/calculator_simbol_equ"
+
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+
+
+                android:background="@drawable/buttonshape_solid"
+                android:shadowColor="#A8A8A8"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="0"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

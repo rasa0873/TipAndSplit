@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="per_person_label">POR PERSONA</string>
+    <string name="total_label">TOTAL</string>
+    <string name="tip">PROPINA</string>
+    <string name="bill">LA CUENTA</string>
+    <string name="tip_amount_label">PROPINA TOTAL</string>
+    <string name="split">A DIVIDIR</string>
+    <string name="about">"Versión "</string>
+    <string name="delete">Borrar</string>
+    <string name="cal_activity_label">Calculadora</string>
+    <string name="calculator">Calculadora</string>
+    <string name="currencies">Tasas de cambio</string>
+    <string name="help">Versión</string>
+    <string name="about_drawer">Acerca de</string>
+    <string name="help_xlarge">VERSIÓN</string>
+    <string name="selected_currency">Moneda Seleccionada:</string>
+    <string name="currencies_xlarge">Tasas de cambio</string>
+    <string name="calculator_xlarge">CALCULADORA</string>
+    <string name="list_name">Seleccione la Moneda</string>
+    <string name="calculator_subtitle">CALCULADORA</string>
+    <string name="pos_answer">Sí</string>
+    <string name="neg_answer">No</string>
+    <string name="action_settings">Configuraciones</string>
+    <string name="progress_dialog_loading">Tasas de cambio...</string>
+    <string name="listview_rate_tag">Tasa de cambio: %1$s</string>
+    <string name="rate_not_available">Tasa de cambio no disponible</string>
+    <string name="max_length_reached_input">"Máxima longitud de número alcanzada "</string>
+    <string name="result_exceeds_max_13">Resultado supera límite de 13 dígitos</string>
+    <string name="service_starting">Iniciando servicio</string>
+
+</resources>

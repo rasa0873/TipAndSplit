@@ -1,0 +1,63 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+
+    <style name="AppTheme.NoActionBar2">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="AlertDialog" parent="Base.Theme.AppCompat.Light.Dialog">
+        <item name="android:textColor">@color/colorTextoBlack</item>
+        <item name="android:textColorPrimary">#595959</item>
+
+    </style>
+
+    <style name="calculator_simbol">
+        <item name="android:fontFamily">@font/muli</item>
+        <item name="android:textColor">@color/lightBlueLetter</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="calculator_number">
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textColor">@color/colorTextoBlack</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="calculator_simbol_equ">
+        <item name="android:fontFamily">@font/muli</item>
+        <item name="android:textColor">@color/blanco</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">35sp</item>
+    </style>
+
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/lightBlueLetter</item>
+        <item name="android:textColorPrimary">@color/colorPrimaryDark</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <!-- Splash Screen theme. -->
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
+</resources>
