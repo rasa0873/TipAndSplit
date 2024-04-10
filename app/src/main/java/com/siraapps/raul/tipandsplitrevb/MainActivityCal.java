@@ -201,7 +201,13 @@ public class MainActivityCal extends AppCompatActivity {
             String displayTextNew;
             if (displayText.length() > 1) {
                 displayText = displayText.substring(0, displayText.length() - 1);
+
+                boolean endsWithDotZero = displayText.endsWith(".0");
+
                 displayTextNew = transformInsertNumber(displayText);
+                if (endsWithDotZero){
+                    displayTextNew = displayTextNew.concat(".0");
+                }
                 displayEditText.setText(displayTextNew);
                 displayEditText.setSelection(displayTextNew.length());
                 }
@@ -255,12 +261,12 @@ public class MainActivityCal extends AppCompatActivity {
         String displayText = displayEditText.getText().toString();
 
         if (symbol.equals(".")){
-            displayEditText.setText(displayText + symbol);
+            displayEditText.setText(displayText.concat(symbol) );   // displayText + symbol
             displayEditText.setSelection(displayEditText.getText().length());
         } else if (symbol.equals("=")){
             extractCalculate();
         } else {
-            upperEditText.setText(displayText + symbol);
+            upperEditText.setText(displayText.concat(symbol)); // displayText + symbol
             displayEditText.setText("");
         }
     }

@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private final String SAVEDCURRENCY = "SAVED CURRENCY";
     private final String SAVEDFLAG = "SAVED FLAG";
 
-    Integer imgidSelectedCurrency;
+    Integer imgIdSelectedCurrency;
     String textSelectedCurrency = "usd";
 
     double numero = 0.00;
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         constraintLayout.addView(progressBar, params);
         progressBar.setVisibility(View.GONE); // initially gone
 
-        imgidSelectedCurrency = R.drawable.usa;
+        imgIdSelectedCurrency = R.drawable.usa;
 
         currencyLabelTip = findViewById(R.id.currencyLabelTip);
         currencyLabelTotal = findViewById(R.id.currencyLabelTotal);
@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         totalTextView = findViewById(R.id.totalTextView);
 
         currencyLogo = findViewById(R.id.currencyLogo);
-        currencyLogo.setImageResource(imgidSelectedCurrency);
+        currencyLogo.setImageResource(imgIdSelectedCurrency);
         currencyLogo.setOnClickListener(v -> {
             progressBar.setVisibility(View.VISIBLE);
             Handler handler = new Handler();
@@ -160,7 +160,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private void jumpToCalculator() {
         String billAmount = "0";
-        if (billEditText.getText().toString().length() > 0){
+        if (!billEditText.getText().toString().isEmpty()){
             billAmount = billEditText.getText().toString();
         }
         String newBillAmount = transformInsertNumber(billAmount);
@@ -276,7 +276,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                               boolean fromUser) {
                     numOfPeople = progress + 1;
                     splitSeekerTextView.setText(formato.format(numOfPeople));
-                    if (billEditText.getText().toString().length() >0) {
+                    if (!billEditText.getText().toString().isEmpty()) {
                         billAmount = Double.parseDouble(billEditText.getText().toString().replaceAll(",", ""));
                         calculate(1.0, billAmount);
                     }
@@ -296,7 +296,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                               boolean fromUser) {
                     tipFromTheBar = progress / 100.0;
                     tipSeekerTextView.setText(percentFormat.format(tipFromTheBar));
-                    if (billEditText.getText().toString().length() >0) {
+                    if (!billEditText.getText().toString().isEmpty()) {
                         billAmount = Double.parseDouble(billEditText.getText().toString().replaceAll(",", ""));
                         calculate(1.0, billAmount);
                     }
@@ -355,6 +355,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         return;
                     }
 
+                    boolean endsWithDotZero = s.toString().endsWith(".0");
+
                     switch (s.toString()){
                         case "" :
                             billEditText.setSelection(0);
@@ -410,7 +412,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     DecimalFormat formato = (DecimalFormat) NumberFormat.getInstance(Locale.US);
                     formato.applyPattern("#,###,###.##");
 
-                    billEditText.setText(formato.format(numero));
+                    String outputNumberString = formato.format(numero);
+
+                    // Ends with dotZero adjustment
+                    if (endsWithDotZero){
+                        billEditText.setText(outputNumberString.concat(".0"));
+                    } else {
+                        billEditText.setText(outputNumberString);
+                    }
+
                     billEditText.setSelection(billEditText.getText().length());
                     calculate(1.0, numero);
 
@@ -433,8 +443,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             if (resultCode == RESULT_OK) {
 
                 assert data != null;
-                imgidSelectedCurrency = data.getIntExtra("responseLogo", 0);
-                currencyLogo.setImageResource(imgidSelectedCurrency);
+                imgIdSelectedCurrency = data.getIntExtra("responseLogo", 0);
+                currencyLogo.setImageResource(imgIdSelectedCurrency);
                 textSelectedCurrency = data.getStringExtra("responseCurrency");
                 savedSelectedCurrency();
 
@@ -474,7 +484,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 assert data != null;
                 billAmountString = data.getStringExtra("responseCalculator");
                 assert billAmountString != null;
-                if (billAmountString.length() > 0)
+                if (!billAmountString.isEmpty())
                     if (!billAmountString.equals("0"))
                 billEditText.setText(billAmountString);
             }
@@ -493,7 +503,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         int savedLogo = sharedPreferences.getInt(SAVEDFLAG, 0);
         if (savedLogo != 0){
-            imgidSelectedCurrency = savedLogo;
+            imgIdSelectedCurrency = savedLogo;
         }
     }
 
@@ -502,7 +512,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Save to SharedPrefs
         SharedPreferences.Editor editor = getPreferences(MODE_PRIVATE).edit();
         editor.putString(SAVEDCURRENCY, textSelectedCurrency);
-        editor.putInt(SAVEDFLAG, imgidSelectedCurrency);
+        editor.putInt(SAVEDFLAG, imgIdSelectedCurrency);
         editor.apply();
 
     }
@@ -512,11 +522,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         View layout = inflater.inflate(R.layout.layout_info_popup, null);
 
         int screenWidth = getResources().getDisplayMetrics().widthPixels;
-        int screnHeight = getResources().getDisplayMetrics().heightPixels;
+        int screenHeight = getResources().getDisplayMetrics().heightPixels;
 
         final PopupWindow pw;
 
-        pw = new PopupWindow(layout, (int)(screenWidth*0.7), (int)(screnHeight*0.5), true);
+        pw = new PopupWindow(layout, (int)(screenWidth*0.7), (int)(screenHeight*0.5), true);
 
         pw.setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         pw.setTouchInterceptor((v, event) -> {
