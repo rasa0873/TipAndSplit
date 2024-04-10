@@ -2,7 +2,7 @@
 // Does the Json query in order to know the currency rates
 // and return those rates
 
-package com.siraapps.raul.tipandsplitreva;
+package com.siraapps.raul.tipandsplitrevb;
 
 import android.os.Handler;
 import android.os.Looper;
@@ -69,7 +69,8 @@ public class JsonQuery {
                         }
                     }
                     catch (IOException e){
-                        e.printStackTrace();
+                        Log.e("ETIQUETA ERROR", "Error while creating Buffered reader", e);
+
                     }
 
                     jsonObject = new JSONObject(builder.toString());
@@ -127,7 +128,7 @@ public class JsonQuery {
         try {
             return new URL(address); // return address converted into URL
         } catch (MalformedURLException e) {
-            e.printStackTrace();
+            Log.e("ETIQUETA ERROR", "Error while creating URL", e);
         }
         return null; // Url couldn't be created
     }

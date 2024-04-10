@@ -1,4 +1,4 @@
-package com.siraapps.raul.tipandsplitreva;
+package com.siraapps.raul.tipandsplitrevb;
 
 import android.app.Service;
 import android.content.Intent;

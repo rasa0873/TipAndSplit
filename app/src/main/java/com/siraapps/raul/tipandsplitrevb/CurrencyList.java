@@ -1,4 +1,4 @@
-package com.siraapps.raul.tipandsplitreva;
+package com.siraapps.raul.tipandsplitrevb;
 
 import android.appwidget.AppWidgetManager;
 import android.content.ComponentName;
@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -136,7 +137,7 @@ public class CurrencyList extends AppCompatActivity {
                 readInternalFile();
             }
         } catch (IOException e){
-            e.printStackTrace();
+            Log.e("ETIQUETA ERROR", "Error while creating inputStream", e);
         }
 
         // JsonQuery onPostExecute Listener
@@ -289,7 +290,7 @@ public class CurrencyList extends AppCompatActivity {
                 }
 
             } catch (JSONException e) {
-                e.printStackTrace();
+                Log.e("ETIQUETA ERROR", "Error while running jsonQuery.getSelectedRate", e);
             }
         }
 
@@ -369,7 +370,7 @@ public class CurrencyList extends AppCompatActivity {
             fileWriteStream.close();
 
         } catch (IOException e){
-            e.printStackTrace();
+            Log.e("ETIQUETA ERROR", "Error while creating fileWriteStream", e);
         }
 
     }
@@ -392,7 +393,7 @@ public class CurrencyList extends AppCompatActivity {
             }
 
         } catch (IOException e){
-            e.printStackTrace();
+            Log.e("ETIQUETA ERROR", "Error while openFileInput", e);
         }
 
     }

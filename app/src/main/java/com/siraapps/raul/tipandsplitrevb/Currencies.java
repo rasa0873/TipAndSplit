@@ -1,4 +1,4 @@
-package com.siraapps.raul.tipandsplitreva;
+package com.siraapps.raul.tipandsplitrevb;
 
 public class Currencies {
 

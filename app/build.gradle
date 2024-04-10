@@ -11,7 +11,7 @@ android {
     }
     compileSdk 34
     defaultConfig {
-        applicationId "com.siraapps.raul.tipandsplitreva"
+        applicationId "com.siraapps.raul.tipandsplitrevb"
         minSdk 24
         targetSdk 34
         versionCode 8
@@ -26,7 +26,7 @@ android {
     }
     productFlavors {
     }
-    namespace 'com.siraapps.raul.tipandsplitreva'
+    namespace 'com.siraapps.raul.tipandsplitrevb'
     lint {
         abortOnError false
         checkReleaseBuilds false
