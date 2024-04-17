@@ -95,7 +95,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         restoreSelectedCurrency();
 
-        formato = new DecimalFormat("#,###,###.##");
+        // Adjusting the Locale:
+        DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.US);
+
+        formato = new DecimalFormat("#,###,###.##", symbols);
 
         billEditText = findViewById(R.id.billEditText);
         billEditText.addTextChangedListener(billAmountEditTextWatcher);
