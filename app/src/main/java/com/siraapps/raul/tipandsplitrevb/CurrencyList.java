@@ -12,7 +12,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.RemoteViews;
-
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
@@ -131,6 +130,7 @@ public class CurrencyList extends AppCompatActivity {
         mListView = findViewById(R.id.listview);
 
         // restore saved currencies
+        // read from file
         try {
             InputStream inputStream = openFileInput(CURRENCY_FILENAME);
             if (inputStream != null){ // file exists
@@ -361,6 +361,7 @@ public class CurrencyList extends AppCompatActivity {
             currenciesText[i] = currencyRates[i].toString() + "\n";
         }
 
+        // Write to file
         try {
 
             fileWriteStream = openFileOutput(CURRENCY_FILENAME, Context.MODE_PRIVATE);

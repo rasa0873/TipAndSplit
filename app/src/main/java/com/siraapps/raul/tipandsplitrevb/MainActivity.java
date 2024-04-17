@@ -23,7 +23,6 @@ import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -95,7 +94,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         restoreSelectedCurrency();
 
-        formato = new DecimalFormat("#,###,###.##");
+        // Adjusting the Locale:
+        DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.US);
+
+        formato = new DecimalFormat("#,###,###.##", symbols);
 
         billEditText = findViewById(R.id.billEditText);
         billEditText.addTextChangedListener(billAmountEditTextWatcher);

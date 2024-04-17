@@ -50,7 +50,6 @@ public class JsonQuery {
             HttpURLConnection connection = null;
 
             try {
-
                 connection = (HttpURLConnection) url.openConnection(); // attempt to connect to the url
                 //connection.setSSLSocketFactory(sc.getSocketFactory());
 

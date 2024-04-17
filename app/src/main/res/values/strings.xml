@@ -31,7 +31,7 @@
     <string name="calculator_xlarge">CALCULATOR</string>
     <string name="about_drawer">About</string>
     <string name="cal_activity_label">Calculator</string>
-    <string name="app_popup" translatable="false">App Version 2.2.1</string>
+    <string name="app_popup" translatable="false">App Version 2.3</string>
     <string name="calculator_subtitle">CALCULATOR</string>
 
     <string name="pos_answer">Yes</string>
